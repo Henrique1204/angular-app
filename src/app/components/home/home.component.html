@@ -1,0 +1,27 @@
+<p>{{ countService.count }}</p>
+
+@if(countService.count) {
+<p>Chegou nas dezenas</p>
+}
+
+@for(item of [].constructor(countService.count); track item) {
+  <p>Item {{ $index + 1 }}</p>
+}
+
+<button (click)="countService.subClick()">Aumentar</button>
+<button (click)="countService.subClick()">Diminuir</button>
+
+
+<!-- Ou -->
+<!-- <p>{{ count }}</p>
+
+@if(count) {
+<p>Chegou nas dezenas</p>
+}
+
+@for(item of [].constructor(count); track item) {
+  <p>Item {{ $index + 1 }}</p>
+}
+
+<button (click)="subClick()">Aumentar</button>
+<button (click)="subClick()">Diminuir</button> -->
